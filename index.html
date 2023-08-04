@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phase 1 Project</title>
 
     <!-- css reset: sindresorhus/modern-normalize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- custom css -->
     <link rel="stylesheet" href="styles.css" />
 
     <!-- custom javascript -->
     <script defer src="main.js"></script>
-</head>
-<body>
-    <!--header begins-->
+  </head>
+  <body>
+    <!-- header begins -->
     <header>
-      <h1>Yu-Gi-Oh! Deck Builder</h1>  
+      <h1>Yu-Gi-Oh! Deck Builder</h1>
     </header>
-    <!--header ends-->
+    <!-- header ends -->
 
-    <!--main begins-->
+    <!-- main begins -->
     <main>
+      <section class="search-form">
+        <h2>Card Section</h2>
+        <form action="GET" id="card-form">
+          <label for="search-terms">Search for Card:</label>
+          <input
+            type="text"
+            name="search-terms"
+            id="search-terms"
+            placeholder="title of card"
+            required
+          />
 
-        <section class="search-form">
-            <h2>Card Section</h2>
-            <form action="GET" id="card-form">
-                <label for="search-terms">Search card:</label>
-                <input type="text" name="search-terms" id="search-terms" placeholder="title of card" required>
-
-                <input type="submit" value="Search">
-            </form>
-        </section>
-
-
+          <input type="submit" value="Search" />
+        </form>
+      </section>
     </main>
-    <!--main ends-->
+    <!-- main ends -->
 
-    <!--footer begins-->
+    <!-- footer begins -->
     <footer>
-        <p>Copyright Josue Gallegos 2023</p>
+      <p>Copyright Josue Gallegos 2023</p>
     </footer>
-    <!--footer ends-->
-</body>
+    <!-- footer ends -->
+  </body>
 </html>
