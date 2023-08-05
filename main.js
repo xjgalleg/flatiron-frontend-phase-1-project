@@ -27,7 +27,11 @@ const getCardData = async () => {
 const handleFormSubmit = async (event) => {
     event.preventDefault();
 
- await getCardData()
+    const searchTerm = searchTermsInput.value.trim();
+    if (searchTerm !== '') {
+        const cards = await getCardData(searchTerm);
+        displayCards(cards);
+    }
 };
 
-searchTermsInput.addEventListener("focus", handleFormInputFocus);
+cardForm.addEventListener("submit", handleFormSubmit);
