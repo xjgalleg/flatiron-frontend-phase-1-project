@@ -48,6 +48,22 @@ const addCardToDeck = (card) => {
         alert("Your deck is full!");
     }
 };
+const updateDeck = () => {
+    deckContainer.innerHTML = '';
+
+    deck.forEach(card => {
+        const deckCardDiv = document.createElement('div');
+        deckCardDiv.classList.add('deck-card');
+        deckCardDiv.textContent = card.name;
+
+        deckCardDiv.addEventListener('click', () => {
+            removeCardFromDeck(card);
+         });
+
+        deckContainer.appendChild(deckCardDiv);
+    });
+};
+
 const handleFormSubmit = async (event) => {
     event.preventDefault();
 
