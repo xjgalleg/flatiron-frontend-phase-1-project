@@ -32,6 +32,10 @@ const displayCards = (cards) => {
         cardName.textContent = card.name;
         cardDiv.appendChild(cardName);
         
+        cardDiv.addEventListener('click', () => {
+            displayCardInfo(card);
+        });
+
         resultsContainer.appendChild(cardDiv);
     });
 };
