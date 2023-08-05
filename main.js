@@ -7,21 +7,22 @@ const deckContainer = document.querySelector('#deck-container');
 const cardInfoBox = document.querySelector('#card-info-box');
 
 let deck = [];
+
+const getCardData = async (fuzzyName) => {
+        const cardDataApiURL = 'https://db.ygoprodeck.com/api/v7/cardinfo.php'
         try {
             const response = await fetch(cardDataApiURL);
             const data = await response.json();
-            const limitedCards = data.data.slice(0,15);
             return data.data;
         } catch (error) {
             console.log(error)
             alert('Something went wrong, please try again later.')
         }
-
 };
 
 const displayCards = (cards) => {
     while (resultsContainer.firstChild) {
-
+        resultsContainer.removeChild(resultsContainer.firstChild);
     }
     
     cards.forEach(card => {
@@ -31,7 +32,7 @@ const displayCards = (cards) => {
         const cardName = document.createElement('h3');
         cardName.textContent = card.name;
         cardDiv.appendChild(cardName);
-        
+
         cardDiv.addEventListener('click', () => {
             displayCardInfo(card);
         });
@@ -48,6 +49,7 @@ const addCardToDeck = (card) => {
         alert("Your deck is full!");
     }
 };
+
 const updateDeck = () => {
     deckContainer.innerHTML = '';
 
@@ -82,6 +84,8 @@ const displayCardInfo = (card) => {
     cardInfoDiv.appendChild(removeButton);
     cardInfoDiv.appendChild(cardInfoDiv);
 };
+
+
 const handleFormSubmit = async (event) => {
     event.preventDefault();
 
