@@ -40,6 +40,14 @@ const displayCards = (cards) => {
     });
 };
 
+const addCardToDeck = (card) => {
+    if (deck.length < 40) {
+        deck.push(card);
+        updateDeck();
+    } else {
+        alert("Your deck is full!");
+    }
+};
 const handleFormSubmit = async (event) => {
     event.preventDefault();
 
