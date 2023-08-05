@@ -3,9 +3,10 @@ console.log("main.js connected");
 const searchTermsInput = document.body.querySelector('#search-terms');
 const cardForm = document.querySelector('#card-form');
 const resultsContainer = document.querySelector('#results-container');
+const deckContainer = document.querySelector('#deck-container');
+const cardInfoBox = document.querySelector('#card-info-box');
 
-const getCardData = async (name) => {
-        const cardDataApiURL = "https://db.ygoprodeck.com/api/v7/cardinfo.php"
+let deck = [];
         try {
             const response = await fetch(cardDataApiURL);
             const data = await response.json();
