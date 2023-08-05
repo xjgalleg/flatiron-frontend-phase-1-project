@@ -16,8 +16,16 @@ const getCardData = async () => {
         
 }
 
-const handleFormInputFocus = async () => {
-  console.log(`focus occured`);
+        const cardName = document.createElement('h3');
+        cardName.textContent = card.name;
+        cardDiv.appendChild(cardName);
+        
+        resultsContainer.appendChild(cardDiv);
+    });
+};
+
+const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
  await getCardData()
 };
