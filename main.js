@@ -64,6 +64,24 @@ const updateDeck = () => {
     });
 };
 
+const displayCardInfo = (card) => {
+    cardInfoBox.innerHTML = '';
+
+    const cardInfoDiv = document.createElement('div');
+    cardInfoDiv.classList.add('card-info-box');
+
+    const cardName = document.createElement('h3');
+    
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove from Deck';
+    removeButton.addEventListener('click', () => {
+        removeCardFromDeck(card);
+    });
+
+    cardInfoDiv.appendChild(cardName);
+    cardInfoDiv.appendChild(removeButton);
+    cardInfoDiv.appendChild(cardInfoDiv);
+};
 const handleFormSubmit = async (event) => {
     event.preventDefault();
 
