@@ -18,3 +18,15 @@ h3 {
 h4 {
     color: #77878b;
 }
+
+#card-form {
+    text-align: center;
+}
+
+#card-form {
+    align-content: center;
+    background-color: #f7f4f3;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}

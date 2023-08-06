@@ -108,18 +108,5 @@ document.addEventListener("DOMContentLoaded", () => {
             displayCards(cards);
         }
     };
-
-    deckContainer.addEventListener('click', (event) => {
-        const clickedListItem = event.target.closest('li');
-
-        if (clickedListItem) {
-            const cardIndex = parseInt(clickedListItem.textContent.split('.')[0] - 1);
-            const clickedCard = deck[cardIndex];
-
-            if (clickedCard) {
-                removeCardFromDeck(clickedCard);
-            }
-        }
-    });
     cardForm.addEventListener("submit", handleFormSubmit);
 });
