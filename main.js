@@ -1,6 +1,6 @@
 console.log("main.js connected");
 
-const searchTermsInput = document.body.querySelector('#search-terms');
+document.addEventListener("DOMContentLoaded", () => {
 const cardForm = document.querySelector('#card-form');
 const resultsContainer = document.querySelector('#results-container');
 const deckContainer = document.querySelector('#deck-container');
