@@ -29,12 +29,16 @@ const displayCards = (cards) => {
         const cardDiv = document.createElement('div');
         cardDiv.classList.add('card');
 
-        const cardName = document.createElement('h3');
+            const cardName = document.createElement('h4');
         cardName.textContent = card.name;
         cardDiv.appendChild(cardName);
 
         cardDiv.addEventListener('click', () => {
+                if (deck.includes(card)) {
             displayCardInfo(card);
+                } else {
+                    addCardToDeck(card);
+                }
         });
 
         resultsContainer.appendChild(cardDiv);
