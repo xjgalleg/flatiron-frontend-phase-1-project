@@ -55,19 +55,22 @@ const addCardToDeck = (card) => {
 };
 
 const updateDeck = () => {
-    deckContainer.innerHTML = '';
+        deckContainer.innerText = ''; 
 
-    deck.forEach(card => {
-        const deckCardDiv = document.createElement('div');
-        deckCardDiv.classList.add('deck-card');
-        deckCardDiv.textContent = card.name;
+        const deckList = document.createElement('ul');
 
-        deckCardDiv.addEventListener('click', () => {
-            removeCardFromDeck(card);
+        deck.forEach((card, index) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${index + 1}. ${card.name}`;
+            deckList.appendChild(listItem);
          });
+        deckContainer.appendChild(deckList);
+    };
 
-        deckContainer.appendChild(deckCardDiv);
-    });
+    const removeCardFromDeck = (card) => {
+        deck = deck.filter(c => c !== card);
+        updateDeck();
+        clearCardInfo();
 };
 
 const displayCardInfo = (card) => {
