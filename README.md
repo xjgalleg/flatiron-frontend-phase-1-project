@@ -7,17 +7,6 @@ This deck builder can help anyone build a deck from scratch.
 
 clone repository, open index.html, start using search form to search up cards
 
-### Deploying / Publishing
-
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
-
-```shell
-packagemanager deploy awesome-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
-
 ## Features
 
 What's all the bells and whistles this project can perform?
