@@ -19,12 +19,10 @@ h4 {
     color: #77878b;
 }
 
-#card-form {
-    text-align: center;
-}
+
 
 #card-form {
-    align-content: center;
+    align: center;
     background-color: #f7f4f3;
     padding: 20px;
     border-radius: 5px;
